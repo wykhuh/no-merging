@@ -1,0 +1,22 @@
+{
+    "name": "No Merging",
+    "version": "0.0.0",
+    "manifest_version": 2,
+    "description": "disables github merge button",
+    "icons": {
+        "128": "images/icon-128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://github.com/*/*/pull/*"
+            ],
+            "js": [
+                "lib/jquery.min.js",
+                "scripts/contentscript.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": false
+        }
+    ]
+}
